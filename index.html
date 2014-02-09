@@ -227,6 +227,85 @@ db.cities.find( filter, question )
         </section>
 
         <section>
+          <p>Exit MongoDB shell</p>
+          <pre><code data-trim contenteditable>
+exit
+          </code></pre>
+        </section>
+
+        <section>
+          <h3>Breath!</h3>
+        </section>
+
+        <section>
+          <h3>Smile!</h3>
+        </section>
+
+        <section>
+          <p>open again the INF202World database:</p>
+          <pre><code data-trim contenteditable>
+mongo INF202World
+          </code></pre>
+        </section>
+
+        <section>
+          <p>See the available collections</p>
+          <pre><code data-trim contenteditable>
+show collections
+          </code></pre>
+        </section>
+
+        <section>
+          <p>See again your city's data</p>
+          <pre><code data-trim contenteditable>
+db.cities.find( { 'name' : 'New York' } )
+          </code></pre>
+          <p>but of course, use your city's names</p>
+        </section>
+
+        <section>
+          <p>Let's add more to it.</p>
+          <p>Update the document with the country.</p>
+          <pre><code data-trim contenteditable>
+db.cities.update( { 'name' : 'New York' }, { $set : { 'country' : 'USA' } } )
+          </code></pre>
+          <p>but of course, use your city's names</p>
+          <p>and it's respective country.</p>
+        </section>
+
+        <section>
+          <p>Note the '$set' operator.</p>
+          <pre><code data-trim contenteditable>
+db.cities.update( { 'name' : 'New York' }, { $set : { 'country' : 'USA' } } )
+          </code></pre>
+          <p>It is VERY important.</p>
+        </section>
+
+        <section>
+          <p>Without the '$set' operator</p>
+          <p>the new data will</p>
+          <p>REPLACE</p>
+          <p>the existing data.</p>
+        </section>
+
+        <section>
+          <p>Check again your city's data</p>
+          <pre><code data-trim contenteditable>
+db.cities.find( { 'name' : 'New York' } )
+          </code></pre>
+          <p>but of course, use your city's names</p>
+        </section>
+
+        <section>
+          <p>WARNING:</p>
+          <p>if at anytime you get the prompt</p>
+          <pre><code data-trim contenteditable>
+...
+          </code></pre>
+          <p>It means that you may not have closed all the {} or () or "".</p>
+        </section>
+
+        <section>
           <h3>Breath!</h3>
         </section>
 
