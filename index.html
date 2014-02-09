@@ -306,6 +306,70 @@ db.cities.find( { 'name' : 'New York' } )
         </section>
 
         <section>
+          <p>The "update"</p>
+          <p>function</p>
+          <p>has two arguments</p>
+        </section>
+
+        <section>
+          <p>The two arguments are:</p>
+          <pre><code data-trim contenteditable>
+db.cities.find( filter, newdata )
+          </code></pre>
+          <p>No need to type this in MongoDB</p>
+        </section>
+
+        <section>
+          <p>The "filter"</p>
+          <p>argument</p>
+          <p>narrows the search</p>
+        </section>
+
+        <section>
+          <p>The "newdata"</p>
+          <p>argument</p>
+          <p>provides data to be added</p>
+          <p>or to replace current data</p>
+        </section>
+
+        <section>
+          <p>If "newdata"</p>
+          <p>uses</p>
+          <p>$set</p>
+          <p>then data will be added</p>
+        </section>
+
+        <section>
+          <p>If "newdata"</p>
+          <p>does not use</p>
+          <p>$set</p>
+          <p>then data will be replaced</p>
+        </section>
+
+        <section>
+          <p>Let's add food data.</p>
+          <pre><code data-trim contenteditable>
+db.cities.update( { 'name' : 'New York' },
+  { $set : { 'food' : [
+              'pizza',
+              'sandwich'
+              ]
+           }
+  }
+  )
+          </code></pre>
+          <p>but of course, use your city's typical food</p>
+        </section>
+
+        <section>
+          <p>Check again your city's data</p>
+          <pre><code data-trim contenteditable>
+db.cities.find( { 'name' : 'New York' } )
+          </code></pre>
+          <p>but of course, use your city's names</p>
+        </section>
+
+        <section>
           <h3>Breath!</h3>
         </section>
 
