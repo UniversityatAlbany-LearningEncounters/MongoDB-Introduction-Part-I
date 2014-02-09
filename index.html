@@ -172,7 +172,7 @@ db.cities.find( { 'name' : 'New York' } )
         <section>
           <p>If your city exists,</p>
           <p>pick another one</p>
-          <p>that is not in the database.</p>
+          <p>that is not in the collection.</p>
         </section>
 
         <section>
@@ -224,6 +224,16 @@ db.cities.find( filter, question )
           <p>argument</p>
           <p>selects the fields</p>
           <p>we want to get back</p>
+        </section>
+
+        <section>
+          <p>When we do</p>
+          <pre><code data-trim contenteditable>
+db.cities.find( {}, { 'name' : 1 } )
+          </code></pre>
+          <p>the "filter" is empty</p>
+          <p>so we are getting all cities (document)</p>
+          <p>from the collection</p>
         </section>
 
         <section>
@@ -418,6 +428,18 @@ db.cities.find(
           <p>Find all cities</p>
           <p>in the same country</p>
           <p>as your city</p>
+        </section>
+
+        <section>
+          <p>Every city</p>
+          <p>is a MongoDB</p>
+          <p>"Document"</p>
+        </section>
+
+        <section>
+          <p>The group of cities</p>
+          <p>is a MongoDB</p>
+          <p>"Collection"</p>
         </section>
 
         <section>
