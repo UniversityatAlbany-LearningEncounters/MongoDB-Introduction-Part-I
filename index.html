@@ -370,6 +370,57 @@ db.cities.find( { 'name' : 'New York' } )
         </section>
 
         <section>
+          <h3>Your</h3>
+          <h3>Turn !</h3>
+        </section>
+
+        <section>
+          <p>Find all cities in a country</p>
+          <pre><code data-trim contenteditable>
+db.cities.find( { 'country' : 'USA' } )
+          </code></pre>
+        </section>
+
+        <section>
+          <p>Find all cities in a country</p>
+          <p>and get only their names</p>
+          <pre><code data-trim contenteditable>
+db.cities.find( { 'country' : 'USA' }, { 'name' : 1 } )
+          </code></pre>
+        </section>
+
+        <section>
+          <p>Find all cities in a country</p>
+          <p>and get only their names</p>
+          <p>without their _id</p>
+          <pre><code data-trim contenteditable>
+db.cities.find( { 'country' : 'USA' }, { 'name' : 1, '_id' : 0  } )
+          </code></pre>
+        </section>
+
+        <section>
+          <p>The same can be written</p>
+          <p>using multiple lines</p>
+          <pre><code data-trim contenteditable>
+db.cities.find(
+    {
+      'country' : 'USA'
+    },
+    {
+      'name' : 1,
+      '_id' : 0
+     }
+   )
+          </code></pre>
+        </section>
+
+        <section>
+          <p>Find all cities</p>
+          <p>in the same country</p>
+          <p>as your city</p>
+        </section>
+
+        <section>
           <h3>Breath!</h3>
         </section>
 
